@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neko - Works</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg-pattern"></div>
+
+  <nav class="navbar">
+    <div class="nav-brand">🐾 Nek0cha</div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Profile</a>
+      <a href="works.html" class="nav-link active">Works</a>
+    </div>
+  </nav>
+
+  <main class="main-container">
+    <section class="works-header">
+      <h1>Works</h1>
+      <p>これまでの成果物・プロジェクト一覧</p>
+    </section>
+
+    <section class="works-grid" id="works-grid">
+      <!-- 
+        成果物を追加するには、下の worksData 配列にオブジェクトを追加してください。
+        カードは JavaScript で自動生成されます。
+      -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Nek0cha. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // =============================================
+    // 成果物データ — ここに追加してください
+    // =============================================
+    const worksData = [
+      // --- サンプル ---
+      {
+        title: "プロフィールサイト",
+        description: "このプロフィールサイト。HTML/CSS/JavaScriptで作成されており、レスポンシブデザインを採用しています。",
+        image: "assets/profilepage.png",                  // 画像パス（nullまたは""ならNO IMAGE表示）
+        link: "https://github.com/Nek0cha/ProfileSite",                    // リンクURL
+        tags: ["Web", "HTML", "CSS", "JavaScript"]   // タグ（任意）
+      },
+      {
+        title: "アクセス情報確認サイト",
+        description: "アクセス情報を確認できるシンプルなWebサイト。IPアドレスやブラウザ情報などを表示します。",
+        image: "assets/infopage.png",                  // 画像パス（nullまたは""ならNO IMAGE表示）
+        link: "https://info.neko-devs.net/",                    // リンクURL
+        tags: ["Web", "JavaScript"]   // タグ（任意）
+      },
+      {
+        title: "ScreenshotToClipboard Mod",
+        description: "スクリーンショットを撮影すると自動でクリップボードにコピーされるMinecraft Mod。",
+        image: "assets/sstoclip.png",                  // 画像パス（nullまたは""ならNO IMAGE表示）
+        link: "https://github.com/Nek0cha/ScreenshotToClipboard",                    // リンクURL
+        tags: ["Minecraft", "Java", "Mod"]   // タグ（任意）
+      },
+      {
+        title: "Utils plugin",
+        description: "チャットフォーマット、定期メッセージ、スコアボード、タブリストなどの便利機能を提供するMinecraftサーバープラグイン。",
+        image: "assets/utilsplugin.png",                  // 画像パス（nullまたは""ならNO IMAGE表示）
+        link: "https://github.com/Nek0cha/UtilsPlugin",                    // リンクURL
+        tags: ["Minecraft", "Java", "Plugin"]   // タグ（任意）
+      },
+      // --- ここに成果物を追加 ---
+      // {
+      //   title: "プロジェクト名",
+      //   description: "説明文をここに書く",
+      //   image: "images/project.png",  // 画像パス or null
+      //   link: "https://example.com",  // リンク先
+      //   tags: ["タグ1", "タグ2"]
+      // },
+    ];
+
+    renderWorks(worksData);
+  </script>
+</body>
+</html>
